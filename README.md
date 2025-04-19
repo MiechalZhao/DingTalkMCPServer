@@ -9,7 +9,7 @@
 - 支持本地化运行的MCP Service
 
 <div align="center">
-  <img src="resource/conversation.jpg" width="600" alt="会话功能">
+  <img src="app/resource/conversation.jpg" width="600" alt="会话功能">
   <br>
   <em>会话功能</em>
 </div>
