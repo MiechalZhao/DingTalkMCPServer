@@ -1,0 +1,73 @@
+openapi: 3.0.1
+info:
+  title: 张三的工作职责
+  description: 按主要职责和团队来查看，仅用于演示，请勿在生产中使用。
+  version: v1.0.0
+x-dingtalk-protocol: stream
+paths:
+  /v1/actions/example/weather/get:
+    get:
+      description: 查看张三的工作职责
+      summary: 查看张三的工作职责
+      operationId: GetCurrentWeather
+      parameters:
+        - name: input
+          in: query
+          description: 输入信息
+          required: true
+          schema:
+            type: string
+            x-dingtalk-context:
+              property: currentInput
+              format: raw
+        - name: sender
+          in: query
+          description: 请求人
+          required: true
+          schema:
+            type: string
+            x-dingtalk-context:
+              property: currentUser
+              format: userId
+        - name: inputAttribute
+          in: query
+          description: 输入信息属性
+          required: true
+          schema:
+            type: string
+            x-dingtalk-context:
+              property: currentInput
+              format: attribute
+        - name: corpId
+          in: query
+          description: 组织信息
+          required: true
+          schema:
+            type: string
+            x-dingtalk-context:
+              property: currentOrg
+              format: corpId
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetWeatherResponse'
+components:
+  schemas:
+    GetWeatherResponse:
+      type: object
+      properties:
+        name:
+          type: string
+          description: 名字
+        date:
+          type: string
+          description: 日期
+        text:
+          type: string
+          description: 主要职责有哪些
+        team_info:
+          type: string
+          description: 团队信息
