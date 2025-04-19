@@ -1,4 +1,4 @@
-# DINGTALK MCP - 通过钉钉客户端AI助理调用本地化私有部署的MCP服务
+# DINGTALK MCP - 通过钉钉客户端AI助理调用本地私有部署的MCP服务
 
 **将仓库导入python IDE工程即可启动运行，无需远端部署**
 
