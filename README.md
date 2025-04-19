@@ -60,7 +60,6 @@
    直接采用IDE import即可
    
    ```
-## 🗄️ 数据库结构
 
 欢迎贡献！交流！联系邮箱 miechalzhao@gmail.com
 
